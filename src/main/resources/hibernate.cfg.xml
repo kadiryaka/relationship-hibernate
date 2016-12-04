@@ -23,6 +23,7 @@
 
         <mapping class="com.kadiryaka.entity.User"/>
         <mapping class="com.kadiryaka.entity.Credential"/>
+        <mapping class="com.kadiryaka.entity.UserParent"/>
 
     </session-factory>
 

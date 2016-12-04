@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -23,6 +24,17 @@ public class User implements Serializable {
 	
 	@Column(name = "U_NAME")
 	private String name;
+	
+	@OneToOne(mappedBy="user")
+	private UserParent parent;
+
+	public UserParent getParent() {
+		return parent;
+	}
+
+	public void setParent(UserParent parent) {
+		this.parent = parent;
+	}
 
 	public Long getId() {
 		return id;
